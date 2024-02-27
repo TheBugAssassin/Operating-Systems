@@ -1,0 +1,18 @@
+
+Documentation 3/3
+Excellent!
+
+Code Solution 3/3
+
+
+Code Clarity 1.5/2
+For next time, use more comments to show understanding and increase readability.
+
+Testing 2/2
+All testing files present, great testing documentation. 
+_____________________
+
+Lab Mark 9.5/10
+
+Group Members: 20mg57, 20lss6, 21ajr4
+

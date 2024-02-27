@@ -1,0 +1,106 @@
+    PID USER     COMMAND         COMMAND
+      1 root     systemd         /sbin/init
+      2 root     kthreadd        [kthreadd]
+      3 root     rcu_gp          [rcu_gp]
+      4 root     rcu_par_gp      [rcu_par_gp]
+      6 root     kworker/0:0H-kb [kworker/0:0H-kblockd]
+      8 root     mm_percpu_wq    [mm_percpu_wq]
+      9 root     ksoftirqd/0     [ksoftirqd/0]
+     10 root     rcu_sched       [rcu_sched]
+     11 root     migration/0     [migration/0]
+     12 root     idle_inject/0   [idle_inject/0]
+     14 root     cpuhp/0         [cpuhp/0]
+     15 root     kdevtmpfs       [kdevtmpfs]
+     16 root     netns           [netns]
+     17 root     rcu_tasks_kthre [rcu_tasks_kthre]
+     18 root     kauditd         [kauditd]
+     19 root     khungtaskd      [khungtaskd]
+     20 root     oom_reaper      [oom_reaper]
+     21 root     writeback       [writeback]
+     22 root     kcompactd0      [kcompactd0]
+     23 root     ksmd            [ksmd]
+     24 root     khugepaged      [khugepaged]
+     70 root     kintegrityd     [kintegrityd]
+     71 root     kblockd         [kblockd]
+     72 root     blkcg_punt_bio  [blkcg_punt_bio]
+     73 root     tpm_dev_wq      [tpm_dev_wq]
+     74 root     ata_sff         [ata_sff]
+     75 root     md              [md]
+     76 root     edac-poller     [edac-poller]
+     77 root     devfreq_wq      [devfreq_wq]
+     78 root     watchdogd       [watchdogd]
+     80 root     kswapd0         [kswapd0]
+     81 root     ecryptfs-kthrea [ecryptfs-kthrea]
+     83 root     kthrotld        [kthrotld]
+     84 root     acpi_thermal_pm [acpi_thermal_pm]
+     85 root     khvcd           [khvcd]
+     86 root     scsi_eh_0       [scsi_eh_0]
+     87 root     scsi_tmf_0      [scsi_tmf_0]
+     88 root     scsi_eh_1       [scsi_eh_1]
+     89 root     scsi_tmf_1      [scsi_tmf_1]
+     91 root     vfio-irqfd-clea [vfio-irqfd-clea]
+     93 root     ipv6_addrconf   [ipv6_addrconf]
+    102 root     kstrp           [kstrp]
+    105 root     kworker/u3:0    [kworker/u3:0]
+    118 root     charger_manager [charger_manager]
+    152 root     kworker/0:1H-kb [kworker/0:1H-kblockd]
+    198 root     raid5wq         [raid5wq]
+    241 root     jbd2/vda1-8     [jbd2/vda1-8]
+    242 root     ext4-rsv-conver [ext4-rsv-conver]
+    277 root     hwrng           [hwrng]
+    315 root     systemd-journal /lib/systemd/systemd-journald
+    336 root     none            bpfilter_umh
+    368 root     systemd-udevd   /lib/systemd/systemd-udevd
+    501 root     kaluad          [kaluad]
+    502 root     kmpath_rdacd    [kmpath_rdacd]
+    503 root     kmpathd         [kmpathd]
+    504 root     kmpath_handlerd [kmpath_handlerd]
+    505 root     multipathd      /sbin/multipathd -d -s
+    516 root     loop0           [loop0]
+    519 root     loop1           [loop1]
+    522 root     loop2           [loop2]
+    523 root     loop3           [loop3]
+    524 root     loop4           [loop4]
+    540 systemd+ systemd-timesyn /lib/systemd/systemd-timesyncd
+    596 systemd+ systemd-network /lib/systemd/systemd-networkd
+    598 systemd+ systemd-resolve /lib/systemd/systemd-resolved
+    633 root     accounts-daemon /usr/lib/accountsservice/accounts-daemon
+    636 root     cron            /usr/sbin/cron -f
+    637 message+ dbus-daemon     /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+    644 root     networkd-dispat /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+    645 root     polkitd         /usr/lib/policykit-1/polkitd --no-debug
+    647 root     qemu-ga         /usr/sbin/qemu-ga
+    648 syslog   rsyslogd        /usr/sbin/rsyslogd -n -iNONE
+    650 root     snapd           /usr/lib/snapd/snapd
+    652 root     systemd-logind  /lib/systemd/systemd-logind
+    654 root     udisksd         /usr/lib/udisks2/udisksd
+    655 daemon   atd             /usr/sbin/atd -f
+    662 root     agetty          /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 hvc0 vt220
+    664 root     agetty          /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+    667 root     agetty          /sbin/agetty -o -p -- \u --noclear tty1 linux
+    692 root     sshd            sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+    693 root     ModemManager    /usr/sbin/ModemManager
+    712 root     unattended-upgr /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+  13155 root     xfsalloc        [xfsalloc]
+  13156 root     xfs_mru_cache   [xfs_mru_cache]
+ 111896 root     kworker/0:0-eve [kworker/0:0-events]
+ 201998 root     fwupd           /usr/libexec/fwupd/fwupd
+ 202050 root     sshd            sshd: 20mg57 [priv]
+ 202057 20mg57   systemd         /lib/systemd/systemd --user
+ 202065 20mg57   (sd-pam)        (sd-pam)
+ 202163 20mg57   sshd            sshd: 20mg57@pts/0
+ 202164 20mg57   bash            -bash
+ 202304 20mg57   sh              sh /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/code-server --start-server --host=127.0.0.1 --accept-server-license-terms --enable-remote-auto-shutdown --port=0 --telemetry-level all --connection-token-file /home/20mg57/.vscode-server/.6c3e3dba23e8fadc360aed75ce363ba185c49794.token
+ 202314 20mg57   node            /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/server-main.js --start-server --host=127.0.0.1 --accept-server-license-terms --enable-remote-auto-shutdown --port=0 --telemetry-level all --connection-token-file /home/20mg57/.vscode-server/.6c3e3dba23e8fadc360aed75ce363ba185c49794.token
+ 202396 20mg57   node            /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/bootstrap-fork --type=ptyHost --logsPath /home/20mg57/.vscode-server/data/logs/20231107T183722
+ 203393 root     sshd            sshd: 20mg57 [priv]
+ 203476 20mg57   sshd            sshd: 20mg57@notty
+ 203477 20mg57   bash            bash
+ 203530 20mg57   node            /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/bootstrap-fork --type=extensionHost --transformURIs --useHostProxy=false
+ 203541 20mg57   node            /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/bootstrap-fork --type=fileWatcher
+ 203632 20mg57   bash            /bin/bash --init-file /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 206257 root     kworker/0:2     [kworker/0:2]
+ 206373 root     kworker/u2:2-ev [kworker/u2:2-events_power_efficient]
+ 206439 root     kworker/u2:0-ev [kworker/u2:0-events_unbound]
+ 214183 20mg57   sleep           sleep 180
+ 214329 20mg57   ps              ps -eo pid,user,comm,command

@@ -1,0 +1,17 @@
+
+Documentation 3.5/3.5
+
+
+Testing Documentation 3.5/3.5
+
+
+Code Correctness 1.5/1.5
+
+
+Code Clarity 1.5/1.5
+Formatting and Commenting are well done.
+
+_____________________
+
+Lab Mark 10/10
+

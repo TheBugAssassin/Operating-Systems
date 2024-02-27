@@ -1,0 +1,1 @@
+Error: Both -comm and -command flags cannot be used together.

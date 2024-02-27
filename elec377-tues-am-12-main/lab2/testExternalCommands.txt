@@ -1,0 +1,763 @@
+Script started on 2023-10-16 13:16:24-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="221" LINES="12"]
+]0;20mg57@elec377-tues-am-12: ~/elec377-tues-am-12/lab2[01;32m20mg57@elec377-tues-am-12[00m:[01;34m~/elec377-tues-am-12/lab2[00m$ ./shell
+%> ps
+    PID TTY          TIME CMD
+ 174011 pts/1    00:00:00 bash
+ 174085 pts/1    00:00:00 shell
+ 174126 pts/1    00:00:00 ps
+%> ps a
+    PID TTY      STAT   TIME COMMAND
+    661 hvc0     Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 hvc0 vt220
+    662 ttyS0    Ss+    0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+    665 tty1     Ss+    0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+ 171050 pts/0    Ss     0:00 /bin/bash --init-file /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/workbench/contrib/terminal/browser/media/shellIntegration-bash.sh
+ 174010 pts/0    S+     0:00 script testExternalCommands.txt
+ 174011 pts/1    Ss     0:00 bash -i
+ 174085 pts/1    S+     0:00 ./shell
+ 174159 pts/1    R+     0:00 ps a
+%> ps aux
+USER         PID %CPU %MEM    VSZ   RSS TTY      STAT START   TIME COMMAND
+root           1  0.0  1.0 169548 10472 ?        Ss   Sep11   1:30 /sbin/init
+root           2  0.0  0.0      0     0 ?        S    Sep11   0:01 [kthreadd]
+root           3  0.0  0.0      0     0 ?        I<   Sep11   0:00 [rcu_gp]
+root           4  0.0  0.0      0     0 ?        I<   Sep11   0:00 [rcu_par_gp]
+root           6  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kworker/0:0H-kblockd]
+root           8  0.0  0.0      0     0 ?        I<   Sep11   0:00 [mm_percpu_wq]
+root           9  0.0  0.0      0     0 ?        S    Sep11   0:12 [ksoftirqd/0]
+root          10  0.0  0.0      0     0 ?        I    Sep11   1:14 [rcu_sched]
+root          11  0.0  0.0      0     0 ?        S    Sep11   0:34 [migration/0]
+root          12  0.0  0.0      0     0 ?        S    Sep11   0:00 [idle_inject/0]
+root          14  0.0  0.0      0     0 ?        S    Sep11   0:00 [cpuhp/0]
+root          15  0.0  0.0      0     0 ?        S    Sep11   0:00 [kdevtmpfs]
+root          16  0.0  0.0      0     0 ?        I<   Sep11   0:00 [netns]
+root          17  0.0  0.0      0     0 ?        S    Sep11   0:00 [rcu_tasks_kthre]
+root          18  0.0  0.0      0     0 ?        S    Sep11   0:00 [kauditd]
+root          19  0.0  0.0      0     0 ?        S    Sep11   0:10 [khungtaskd]
+root          20  0.0  0.0      0     0 ?        S    Sep11   0:00 [oom_reaper]
+root          21  0.0  0.0      0     0 ?        I<   Sep11   0:00 [writeback]
+root          22  0.0  0.0      0     0 ?        S    Sep11   0:00 [kcompactd0]
+root          23  0.0  0.0      0     0 ?        SN   Sep11   0:00 [ksmd]
+root          24  0.0  0.0      0     0 ?        SN   Sep11   0:00 [khugepaged]
+root          70  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kintegrityd]
+root          71  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kblockd]
+root          72  0.0  0.0      0     0 ?        I<   Sep11   0:00 [blkcg_punt_bio]
+root          73  0.0  0.0      0     0 ?        I<   Sep11   0:00 [tpm_dev_wq]
+root          74  0.0  0.0      0     0 ?        I<   Sep11   0:00 [ata_sff]
+root          75  0.0  0.0      0     0 ?        I<   Sep11   0:00 [md]
+root          76  0.0  0.0      0     0 ?        I<   Sep11   0:00 [edac-poller]
+root          77  0.0  0.0      0     0 ?        I<   Sep11   0:00 [devfreq_wq]
+root          78  0.0  0.0      0     0 ?        S    Sep11   0:00 [watchdogd]
+root          80  0.0  0.0      0     0 ?        S    Sep11   8:47 [kswapd0]
+root          81  0.0  0.0      0     0 ?        S    Sep11   0:00 [ecryptfs-kthrea]
+root          83  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kthrotld]
+root          84  0.0  0.0      0     0 ?        I<   Sep11   0:00 [acpi_thermal_pm]
+root          85  0.0  0.0      0     0 ?        S    Sep11   0:00 [khvcd]
+root          86  0.0  0.0      0     0 ?        S    Sep11   0:00 [scsi_eh_0]
+root          87  0.0  0.0      0     0 ?        I<   Sep11   0:00 [scsi_tmf_0]
+root          88  0.0  0.0      0     0 ?        S    Sep11   0:00 [scsi_eh_1]
+root          89  0.0  0.0      0     0 ?        I<   Sep11   0:00 [scsi_tmf_1]
+root          91  0.0  0.0      0     0 ?        I<   Sep11   0:00 [vfio-irqfd-clea]
+root          93  0.0  0.0      0     0 ?        I<   Sep11   0:00 [ipv6_addrconf]
+root         102  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kstrp]
+root         105  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kworker/u3:0]
+root         118  0.0  0.0      0     0 ?        I<   Sep11   0:00 [charger_manager]
+root         152  0.0  0.0      0     0 ?        I<   Sep11   0:27 [kworker/0:1H-kblockd]
+root         197  0.0  0.0      0     0 ?        I<   Sep11   0:00 [raid5wq]
+root         240  0.0  0.0      0     0 ?        S    Sep11   0:15 [jbd2/vda1-8]
+root         241  0.0  0.0      0     0 ?        I<   Sep11   0:00 [ext4-rsv-conver]
+root         276  0.0  0.0      0     0 ?        S    Sep11   0:12 [hwrng]
+root         314  0.0  1.6 101384 16152 ?        S<s  Sep11   0:19 /lib/systemd/systemd-journald
+root         336  0.0  0.0   2488   508 ?        S    Sep11   0:00 bpfilter_umh
+root         365  0.0  0.4  20388  4664 ?        Ss   Sep11   0:26 /lib/systemd/systemd-udevd
+root         500  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kaluad]
+root         501  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kmpath_rdacd]
+root         502  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kmpathd]
+root         503  0.0  0.0      0     0 ?        I<   Sep11   0:00 [kmpath_handlerd]
+root         504  0.0  1.8 280208 18000 ?        SLsl Sep11   6:41 /sbin/multipathd -d -s
+root         515  0.0  0.0      0     0 ?        S<   Sep11   0:00 [loop0]
+root         518  0.0  0.0      0     0 ?        S<   Sep11   0:11 [loop1]
+root         519  0.0  0.0      0     0 ?        S<   Sep11   0:00 [loop2]
+systemd+     534  0.0  0.4  90884  4228 ?        Ssl  Sep11   0:19 /lib/systemd/systemd-timesyncd
+systemd+     588  0.0  0.2  19076  2448 ?        Ss   Sep11   0:18 /lib/systemd/systemd-networkd
+systemd+     590  0.0  0.7  24808  7000 ?        Ss   Sep11   0:25 /lib/systemd/systemd-resolved
+root         625  0.0  0.3 241348  3588 ?        Ssl  Sep11   1:57 /usr/lib/accountsservice/accounts-daemon
+root         628  0.0  0.2   8540  2416 ?        Ss   Sep11   0:15 /usr/sbin/cron -f
+message+     630  0.0  0.4   7976  4244 ?        Ss   Sep11   0:10 /usr/bin/dbus-daemon --system --address=systemd: --nofork --nopidfile --systemd-activation --syslog-only
+root         637  0.0  1.1  29876 11128 ?        Ss   Sep11   0:00 /usr/bin/python3 /usr/bin/networkd-dispatcher --run-startup-triggers
+root         638  0.0  0.4 236424  4468 ?        Ssl  Sep11   0:03 /usr/lib/policykit-1/polkitd --no-debug
+root         639  0.0  0.0   6448   152 ?        Ss   Sep11   0:00 /usr/sbin/qemu-ga
+syslog       641  0.0  0.1 224688  1888 ?        Ssl  Sep11   0:04 /usr/sbin/rsyslogd -n -iNONE
+root         645  0.0  0.5  17732  5500 ?        Ss   Sep11   0:16 /lib/systemd/systemd-logind
+root         647  0.0  0.6 395504  6420 ?        Ssl  Sep11   0:16 /usr/lib/udisks2/udisksd
+daemon       650  0.0  0.2   4016  2028 ?        Ss   Sep11   0:00 /usr/sbin/atd -f
+root         661  0.0  0.1   7572  1808 hvc0     Ss+  Sep11   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 hvc0 vt220
+root         662  0.0  0.1   7572  1636 ttyS0    Ss+  Sep11   0:00 /sbin/agetty -o -p -- \u --keep-baud 115200,38400,9600 ttyS0 vt220
+root         665  0.0  0.1   6048  1436 tty1     Ss+  Sep11   0:00 /sbin/agetty -o -p -- \u --noclear tty1 linux
+root         691  0.0  0.4  12184  4384 ?        Ss   Sep11   0:02 sshd: /usr/sbin/sshd -D [listener] 0 of 10-100 startups
+root         698  0.0  0.2 318840  2860 ?        Ssl  Sep11   0:00 /usr/sbin/ModemManager
+root         719  0.0  1.0 108128 10480 ?        Ssl  Sep11   0:00 /usr/bin/python3 /usr/share/unattended-upgrades/unattended-upgrade-shutdown --wait-for-signal
+root        8092  0.0  0.0      0     0 ?        I<   Sep12   0:00 [xfsalloc]
+root        8094  0.0  0.0      0     0 ?        I<   Sep12   0:00 [xfs_mru_cache]
+root       27836  0.0  0.0      0     0 ?        S<   Sep12   0:13 [loop3]
+root       28583  0.0  0.0      0     0 ?        S<   Sep12   0:00 [loop4]
+root      148173  0.0  0.0      0     0 ?        S<   Oct10   0:00 [loop5]
+root      148330  0.0  2.0 1246024 20324 ?       Ssl  Oct10   0:53 /usr/lib/snapd/snapd
+root      169962  0.0  0.0      0     0 ?        I    00:00   0:42 [kworker/0:1-cgroup_destroy]
+root      170498  0.0  0.9  14240  9080 ?        Ss   12:48   0:00 sshd: 20mg57 [priv]
+20mg57    170507  0.0  0.9  19084  9152 ?        Ss   12:49   0:00 /lib/systemd/systemd --user
+root      170508  0.1  0.0      0     0 ?        I    12:49   0:01 [kworker/0:2-events]
+20mg57    170513  0.0  0.4 172120  4804 ?        S    12:49   0:00 (sd-pam)
+20mg57    170617  0.1  0.6  14380  6440 ?        S    12:49   0:01 sshd: 20mg57@notty
+20mg57    170618  0.0  0.3   8748  3460 ?        Ss   12:49   0:00 bash
+20mg57    170666  0.0  0.0   2608   528 ?        S    12:49   0:00 sh /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/bin/code-server --start-server --host=127.0.0.1 --accept-server-license-terms 
+20mg57    170676  0.5  7.8 851620 77424 ?        Sl   12:49   0:09 /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out
+20mg57    170747  0.3  5.9 735480 59120 ?        Rl   12:49   0:06 /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out
+20mg57    170771  1.0 14.2 918936 140904 ?       Sl   12:49   0:16 /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out
+20mg57    170777  0.0  4.2 837844 41856 ?        Sl   12:49   0:00 /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/node /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out
+20mg57    170858  0.2  2.3  69972 23668 ?        Sl   12:49   0:03 /home/20mg57/.vscode-server/extensions/ms-vscode.cpptools-1.17.5-linux-x64/bin/cpptools
+20mg57    170957  0.0  0.0      0     0 ?        Z    12:49   0:00 [cpptools] <defunct>
+20mg57    170958  0.0  2.3 4258056 23456 ?       Sl   12:49   0:01 /home/20mg57/.vscode-server/extensions/ms-vscode.cpptools-1.17.5-linux-x64/bin/cpptools-srv 170858 {6CF36D2B-C2A2-4D53-89AB-209EA7358BC0}
+20mg57    171050  0.0  0.5  10020  5048 pts/0    Ss   12:53   0:00 /bin/bash --init-file /home/20mg57/.vscode-server/bin/6c3e3dba23e8fadc360aed75ce363ba185c49794/out/vs/workbench/contrib/terminal/browser/media/shellIntegr
+root      171356  0.0  0.0      0     0 ?        I    12:56   0:00 [kworker/u2:1-events_unbound]
+root      172476  0.0  0.0      0     0 ?        I    13:05   0:00 [kworker/u2:2-events_unbound]
+20mg57    174008  0.0  0.0   7228   584 ?        S    13:16   0:00 sleep 180
+20mg57    174010  0.0  0.2   7576  2400 pts/0    S+   13:16   0:00 script testExternalCommands.txt
+20mg57    174011  0.0  0.4  10000  4876 pts/1    Ss   13:16   0:00 bash -i
+20mg57    174085  0.0  0.0   2488   576 pts/1    S+   13:16   0:00 ./shell
+20mg57    174200  0.0  0.3  10612  3232 pts/1    R+   13:16   0:00 ps aux
+%> car t hello.c
+#include <stdio.h>
+#include <pwd.h>
+#include <unistd.h>
+
+int main(int argc, char * argv[]){
+    struct passwd *pw = getpwuid(getuid());
+    printf("Hello %s\n", pw->pw_name);
+}
+%> more<she     <shell.c        shell.c
+#include <stdio.h>
+#include <unistd.h>
+#include <stdlib.h>
+#include <string.h>
+#include <dirent.h>
+#include <sys/types.h>
+#include <pwd.h>
+#include <ctype.h>
+#include <sys/wait.h>
+#include <sys/stat.h>
+
+[7m--More--(1%)[27m//+[K
+// File:    shell.c
+//
+// Pupose:  This program implements a simple shell program. It does not start
+//      processes at this point in time. However, it will change directory
+//      and list the contents of the current directory.
+//
+//      The commands are:
+//         cd name -> change to directory name, print an error if the directory doesn't exist.
+//                    If there is no parameter, then change to the home directory.
+//         ls -> list the entries in the current directory.
+[7m--More--(4%)[27m//                If no arguments, then ignores entries starting with .
+//                If -a then all entries
+//         pwd -> print the current directory.
+//         exit -> exit the shell (default exit value 0)
+//              any argument must be numeric and is the exit value
+//
+//      if the command is not recognized an error is printed.
+//-
+
+#define CMD_BUFFSIZE 1024
+#define MAXARGS 10
+[7m--More--(7%)[27m[K
+// Function to filter hidden files in scandir
+int filterHidden(const struct dirent *entry) {
+    // Filter out entries starting with a dot (hidden files)
+    return (entry->d_name[0] != '.');
+}
+
+// Comparison function for alphasort
+int alphaSort(const struct dirent **a, const struct dirent **b) {
+    // Compare two dirent structures by their names
+    return strcasecmp((*a)->d_name, (*b)->d_name);
+[7m--More--(9%)[27m}[K
+
+int splitCommandLine(char *commandBuffer, char *args[], int maxargs);
+int doInternalCommand(char *args[], int nargs);
+int doProgram(char *args[], int nargs);
+
+//+
+// Function: main
+//
+// Purpose: The main function. Contains the read
+//      eval print loop for the shell.
+[7m--More--(11%)[27m//[K
+// Parameters: (none)
+//
+// Returns: integer (exit status of shell)
+//-
+
+int main() {
+    char commandBuffer[CMD_BUFFSIZE];
+    // Note the plus one, allows for an extra null
+    char *args[MAXARGS+1];
+    // Print prompt.. fflush is needed because
+[7m--More--(12%)[27m    // Stdout is line buffered, and won't
+    // Write to terminal until newline
+    printf("%%> ");
+    fflush(stdout);
+    while(fgets(commandBuffer,CMD_BUFFSIZE,stdin) != NULL){
+        //printf("%s",commandBuffer);
+        // Remove newline at end of buffer
+        int cmdLen = strlen(commandBuffer);
+        if (commandBuffer[cmdLen-1] == '\n'){
+            commandBuffer[cmdLen-1] = '\0';
+            cmdLen--;
+[7m--More--(15%)[27m            //printf("<%s>\n",commandBuffer);
+        }
+
+        // Split command line into words.(Step 2)
+
+        // TODO
+        int nargs = splitCommandLine(commandBuffer, args, MAXARGS);
+
+        // Add a null to end of array (Step 2)
+
+        // TODO
+[7m--More--(17%)[27m        args[nargs] = NULL;
+
+        //Debugging
+        // printf("%d\n", nargs);
+        // int i;
+        // for (i = 0; i < nargs; i++){
+        //     printf("%d: %s\n",i,args[i]);
+        // }
+        // // Element just past nargs
+        // printf("%d: %x\n",i, args[i]);
+
+[7m--More--(19%)[27m        // TODO: check if 1 or more args (Step 3)
+        // TODO: if one or more args, call doInternalCommand  (Step 3)        
+        // TODO: if doInternalCommand returns 0, call doProgram  (Step 4)
+        // TODO: if doProgram returns 0, print error message (Step 3 & 4) that the command was not found.
+        if (nargs > 0) {
+            if (doInternalCommand(args, nargs) == 0) {
+                if (doProgram(args, nargs) == 0) {
+                    printf("Error: Command '%s' not found.\n", args[0]);
+                }
+            }
+        }
+[7m--More--(22%)[27m[K
+        // Print prompt
+        printf("%%> ");
+        fflush(stdout);
+    }
+    return 0;
+}
+
+////////////////////////////// String Handling (Step 1) ///////////////////////////////////
+
+//+
+[7m--More--(23%)[27m// Function: skipChar
+//
+// Purpose: This function skips over a given char in a string
+//      For security, will not skip null chars.
+//
+// Parameters:
+//    charPtr Pointer to string
+//    skip character to skip
+//
+// Returns: Pointer to first character after skipped chars
+//      ID function if the string doesn't start with skip,
+[7m--More--(25%)[27m//      or skip is the null character
+//-
+
+char * skipChar(char * charPtr, char skip){
+    // TODO: contents of function
+    if (charPtr != NULL) {
+        while (*charPtr != '\0' && *charPtr == skip) {
+            charPtr++;
+        }
+    // TODO: replace null with proper value
+    return charPtr;
+[7m--More--(27%)[27m    }[K
+    
+}
+
+//+
+// Function: splitCommandLine
+//
+// Purpose: SplitCommandLine splits a command line input into individual arguments and stores
+//          them in the arguments array. It also makes sure number of arguments <= max arguments parameter
+//      
+//
+[7m--More--(29%)[27m// Parameters:
+//   commandBuffer (String representing the command line input to be split)
+//   args (Array to store indiviudal arguements)
+//   maxargs (Max number of arguements contained in args)
+//
+// Returns: Number of arguments stored in args, returns 0 if an error
+//          occurs (ex: args > maxargs).
+//-
+
+int splitCommandLine(char * commandBuffer, char* args[], int maxargs){
+    // TODO: contents of function
+[7m--More--(32%)[27m    int nargs = 0;
+    char *token = commandBuffer;
+    // Enter a loop
+    do {
+        // Skip leading spaces using external function
+        token = skipChar(token, ' ');
+        // Check if we've reached the end of the input string
+        if (*token == '\0') {
+            return nargs;
+        }
+        // Check if we've exceeded the maximum number of arguments
+[7m--More--(34%)[27m        if (nargs == maxargs) {
+            fprintf(stderr, "Error: Too many arguments.\n");
+            return 0;
+        }
+        // Store the current word in the args array and increment the argument count
+        args[nargs++] = token;
+        // Find the next space character (word separator).
+        char *nextSpace = strchr(token, ' ');
+        if (nextSpace == NULL){
+            // If no more spaces are found, set token to the end of the string which will terminate the loop
+            token = strchr(token, '\0');
+[7m--More--(37%)[27m        } else {
+            // If a space is found, update the token to point to the next word and terminate the current word
+            token = nextSpace;
+            *token++ = '\0';
+        }
+    } while (*token != '\0');
+    // TODO: reutrn proper value
+    return nargs;
+}
+
+////////////////////////////// External Program  (Note this is step 4, complete doeInternalCommand first!!) ///////////////////////////////////
+[7m--More--(40%)[27m[K
+// List of directorys to check for command
+// Terminated by null value
+char * path[] = {
+    ".",
+    "/usr/bin",
+    NULL
+};
+
+//+
+// Function: doProgram
+[7m--More--(41%)[27m//[K
+// Purpose: Searches for executable file that matches input, in the directories listed in the path array.
+//      If executable is found, fork is used to create a child process and attempts to execute
+//      the command using execv (takes path of file to execute and the arguements).
+//
+// Parameters:
+//   args (Array containing the command and its arguments)
+//   nargs (Number of arguments in args)
+//
+// Returns:
+//   1 = found and executed the file
+[7m--More--(44%)[27m//   0 = could not find and execute the file
+//-
+
+int doProgram(char *args[], int nargs){
+    // Find the executable
+    // TODO: add body.
+    // Note this is step 4, complete doInternalCommand first!!!
+    struct stat status;
+    char *cmd_path;
+    int i = 0;
+    int currentDirectory = 0;
+[7m--More--(46%)[27m    // Loop through the directories in the 'path' array to find the executable
+    while (path[currentDirectory] != NULL) {
+        // Allocate memory for the command path
+        cmd_path = (char *) malloc(strlen(path[currentDirectory]) + strlen(args[0]) + strlen("/"));
+        // Create the complete command path
+        sprintf(cmd_path, path[currentDirectory]);
+        sprintf(cmd_path + strlen(cmd_path), "/");
+        sprintf(cmd_path + strlen(cmd_path), args[0]);
+        // Check the status of the file
+        if (stat(cmd_path, &status) == 0) {
+            if (S_ISREG(status.st_mode)) {
+[7m--More--(50%)[27m                if (status.st_mode&S_IXUSR) {
+                    // The file is a regular file and is executable
+                    break;
+                }
+                else {
+                    // The file is not executable
+                    printf("Error: File found is not executable.\n");
+                    return 0;
+                }
+            }
+            // else {
+[7m--More--(52%)[27m            //     return 0;
+            // }
+        }
+        // else {
+        //     return 0;
+        // }
+        currentDirectory++;
+    }
+    // If cmd_path is still NULL, no executable was found
+    if (cmd_path == NULL) {
+        return 0;
+[7m--More--(54%)[27m    }[K
+    // Fork a child process
+    int processID = fork();
+    if (processID == -1) {
+        // Child process could not be created
+        printf("Unable to create child process.\n");
+        free(cmd_path);
+        return 0;
+    }
+    else if (processID == 0) {
+        // This code will be executed in the child process
+[7m--More--(56%)[27m        // Execute the command using execv
+        execv(cmd_path, args);
+    }
+    else {
+        wait(NULL);
+    }
+    free(cmd_path);
+    return 1;
+}
+
+////////////////////////////// Internal Command Handling (Step 3) ///////////////////////////////////
+[7m--More--(57%)[27m[K
+///////////////////////////////
+// Command Handling Functions //
+///////////////////////////////
+
+// TODO: a function for each command handling function
+// goes here. Also make sure a comment block prefaces
+// each of the command handling functions.
+
+// Define command handling function pointer type
+typedef void(*commandFunc)(char * args[], int nargs);
+[7m--More--(60%)[27m[K
+//+
+// Function: exitFunc
+//
+// Purpose: Exits the shell
+//
+// Parameters:
+//   args (Array containing the command and its arguments)
+//   nargs (Number of arguments in args)
+//
+// Returns: (none)
+[7m--More--(61%)[27m//-[K
+
+void exitFunc(char *args[], int nargs) {
+    // Exits the system
+    exit(0);
+}
+
+//+
+// Function: pwdFunc
+//
+// Purpose: Retrieves and prints the current working directory.
+[7m--More--(62%)[27m//[K
+// Parameters:
+//   args (Array containing the command and its arguments)
+//   nargs (Number of arguments in args)
+//
+// Returns: (none)
+//-
+
+void pwdFunc(char *args[], int nargs) {
+    // Get the current working directory.
+    char *cwd = getcwd(NULL, 0);
+[7m--More--(64%)[27m    // Check if getcwd() returned NULL (indicating an error).
+    if (cwd == NULL) {
+        printf("Error: Could not retrive working directory.\n");
+    }
+    // If getcwd() was successful, print the current working directory and free the allocated memory.
+    else {
+        printf("%s\n", cwd);
+        free(cwd);
+    }
+}
+
+[7m--More--(66%)[27m//+[K
+// Function: cdFunc
+//
+// Purpose: Changes the current working directory based on input. If only cd is entered with no second argument,
+//          it changes the current directory to one before/above the current. If another arguement is provided
+//          after cd it changes the current directory to the specified directory.
+//
+// Parameters:
+//   args (Array containing the command and its arguments)
+//   nargs (Number of arguments in args)
+//
+[7m--More--(69%)[27m// Returns: (none)
+//-
+
+void cdFunc(char *args[], int nargs) {
+    // New character pointer varible for storing start of string of directory
+    char *newDirectory;
+    // Check if user would like to return back a directory (the current directory is changed to the home directory), if only a single word is input (without a space)
+    if (nargs == 1) {
+        // Retrieve a pointer to the password file entry of a user
+        struct passwd *pw = getpwuid(getuid());
+        // Ensure the result is not NULL and print an error if the pw_dir field of the password struct cannout be used to retrive the home directory
+[7m--More--(73%)[27m        if (pw == NULL) {
+            printf("Error: Unable to retrieve home directory.\n");
+            return;
+        }
+        // Set new directory pointer varible to current directory if there are no errors
+        newDirectory = pw->pw_dir;
+    }
+    // Check if user would like to move into a specified directory, if two words are input (separated by space)
+    else {
+        // Set new directory to the specified directory as the second argument of input (second word after the space), if that directory exists
+        newDirectory = args[1];
+[7m--More--(76%)[27m    }[K
+    // Print an error if the specified directory does not exist
+    if (chdir(newDirectory) != 0) {
+        printf("Error: Unable to locate the specified directory.\n");
+        return;
+    }
+}
+
+//+
+// Function: lsFunc
+//
+[7m--More--(78%)[27m// Purpose: This function lists the contents of the current working directory. If -a is used as the
+//          second argument, it can show hidden files (files that begin with .).
+//
+// Parameters:
+//   args (Array containing the command and its arguments)
+//   nargs (Number of arguments in args)
+//
+// Returns: (none)
+//-
+
+void lsFunc(char *args[], int nargs) {
+[7m--More--(80%)[27m    // Flag to show hidden files (default: off)
+    int showHidden = 0;
+    // Ensure if two paramters are input, that an error message is printed, and the routine is returned at that point
+    if (nargs > 1 && strcmp(args[1], "-a") != 0) {
+        printf("Error: Invalid second input parameter (should be '-a').\n");
+        return;
+    }
+    // Set hidden flag on if the second word (paramter after the space) is equal to -a
+    if (nargs > 1 && strcmp(args[1], "-a") == 0) {
+        showHidden = 1;
+    }
+[7m--More--(83%)[27m    // Since scandir function is used to list the contents of a directory, and it is passed a pointer to a pointer to a pointer of the dirent structure (directory entity) and stores an array of pointers to dirents in the 
+pointer, nameList is the pointer to pointers
+    struct dirent **nameList;
+    // Set numEnts to the number of entries in the array using the pointer to the list, determining whether to include hidden files (files that start with a dot .) in the directory listing, and alphabetically sorting them
+    int numEnts = scandir(".", &nameList, showHidden ? NULL : filterHidden, alphaSort);
+    // Return if there are no entries and thus not in a current directory
+    if (numEnts < 0) {
+        return;
+    }
+    // Print the directory
+    for (int i = 0; i < numEnts; i++) {
+[7m--More--(88%)[27m        printf("%s\n", nameList[i]->d_name);
+        free(nameList[i]);
+    }
+    free(nameList);
+}
+
+// Associate a command name with a command handling function
+struct cmdStruct{
+   char *cmdName;
+   commandFunc cmdFunc;
+};
+[7m--More--(90%)[27m[K
+// Prototypes for command handling functions
+// TODO: add prototype for each comamand function
+void exitFunc(char *args[], int nargs);
+void pwdFunc(char *args[], int nargs);
+void lsFunc(char *args[], int nargs);
+void cdFunc(char *args[], int nargs);
+
+// List commands and functions
+// Must be terminated by {NULL, NULL} 
+// In a real shell, this would be a hashtable.
+[7m--More--(92%)[27mstruct cmdStruct commands[] = {
+   // TODO: add entry for each command
+   {"exit", exitFunc},
+   {"pwd", pwdFunc},
+   {"ls", lsFunc},
+   {"cd", cdFunc},
+   {NULL, NULL}     // Terminator
+};
+
+//+
+// Function: doInternalCommand
+[7m--More--(93%)[27m//[K
+// Purpose: Checks if the specified command input is an valid internal command by comparing the input 
+//          to a predefined list of commands and their associated functions. If the input matches a predifned
+//          command the corresponding function is called with the given arguments. 
+//
+// Parameters:
+//   args (Array containing the command and its arguments)
+//   nargs (Number of arguments in args)
+//
+// Returns:
+//   1: If args[0] is an internal command and its corresponding function is executed.
+[7m--More--(97%)[27m//   0: If args[0] is not an internal command.
+//-
+
+int doInternalCommand(char * args[], int nargs){
+    // TODO: function contents (step 3)
+    int i = 0;
+    while (commands[i].cmdName != NULL) {
+        //printf("%d ", strcmp(commands[i].cmdName,args[0]));
+        if (strcmp(commands[i].cmdName,args[0]) == 0) {
+            commands[i].cmdFunc(args, nargs);
+            return 1;
+[7m--More--(99%)[27m        }[K
+        i++;
+    }
+    return 0;
+}
+%> man man
+[?1049h[22;0;0t[?1h=MAN(1)                                                                                             Manual pager utils                                                                                            MAN(1)[m
+[m
+[1mNAME[0m[m
+       man - an interface to the system reference manuals[m
+[m
+[1mSYNOPSIS[0m[m
+       [1mman[0m [[4mman[24m [4moptions[24m] [[[4msection[24m] [4mpage[24m ...] ...[m
+       [1mman[0m [1m-k[0m [[4mapropos[24m [4moptions[24m] [4mregexp[24m ...[m
+       [1mman[0m [1m-K[0m [[4mman[24m [4moptions[24m] [[4msection[24m] [4mterm[24m ...[m
+       [1mman[0m [1m-f[0m [[4mwhatis[24m [4moptions[24m] [4mpage[24m ...[m
+       [1mman[0m [1m-l[0m [[4mman[24m [4moptions[24m] [4mfile[24m ...[m
+[7m Manual page man(1) line 1 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mman[0m [1m-w[0m|[1m-W[0m [[4mman[24m [4moptions[24m] [4mpage[24m ...[m
+[7m Manual page man(1) line 2 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page man(1) line 3 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[1mDESCRIPTION[0m[m
+[7m Manual page man(1) line 4 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       [1mman[0m is the system's manual pager.  Each [4mpage[24m argument given to [1mman[0m is normally the name of a program, utility or function.  The [4mmanual[24m [4mpage[24m associated with each of these arguments is then found and displayed.[m
+[7m Manual page man(1) line 5 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       A [4msection[24m, if provided, will direct [1mman[0m to look only in that [4msection[24m of the manual.  The default action is to search in all of the available [4msections[24m following a pre-defined order (see [1mDEFAULTS[0m), and to  show[m
+[7m Manual page man(1) line 6 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       only the first [4mpage[24m found, even if [4mpage[24m exists in several [4msections[24m.[m
+[7m Manual page man(1) line 7 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page man(1) line 8 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       The table below shows the [4msection[24m numbers of the manual followed by the types of pages they contain.[m
+[7m Manual page man(1) line 9 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K[m
+[7m Manual page man(1) line 10 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       1   Executable programs or shell commands[m
+[7m Manual page man(1) line 11 (press h for help or q to quit)[27m[K[K [KESCESC[KOO[KBB[K       2   System calls (functions provided by the kernel)[m
+[7m Manual page man(1) line 12 (press h for help or q to quit)[27m[K[K[?1l>[?1049l[23;0;0t%> apropos code
+armscii-8 (7)        - Armenian character set encoded in octal, decimal, and hexadecimal
+ascii (7)            - ASCII character set encoded in octal, decimal, and hexadecimal
+base32 (1)           - base32 encode/decode data and print to standard output
+base64 (1)           - base64 encode/decode data and print to standard output
+bind_textdomain_codeset (3) - set encoding of message translations
+biosdecode (8)       - BIOS information decoder
+tc-codel (8)         - Controlled-Delay Active Queue Management algorithm
+codepage (1)         - extract a codepage from an MSDOS codepage file
+console_codes (4)    - Linux console escape and control sequences
+cp1251 (7)           - CP 1251 character set encoded in octal, decimal, and hexadecimal
+cp1252 (7)           - CP 1252 character set encoded in octal, decimal, and hexadecimal
+crypt_gensalt (3)    - encode settings for passphrase hashing
+crypt_gensalt_ra (3) - encode settings for passphrase hashing
+crypt_gensalt_rn (3) - encode settings for passphrase hashing
+dmidecode (8)        - DMI table decoder
+dmmp_strerror (3)    - Convert error code to string.
+enc2xs (1)           - - Perl Encode Module Generator
+errstr (1ssl)        - lookup error codes
+fstab-decode (8)     - run a command with fstab-encoded arguments
+getkeycodes (8)      - print kernel scancode-to-keycode mapping table
+git-sh-i18n (1)      - Git's i18n setup code for shell scripts
+git-sh-setup (1)     - Common Git shell script setup code
+iso-8859-1 (7)       - ISO 8859-1 character set encoded in octal, decimal, and hexadecimal
+iso-8859-10 (7)      - ISO 8859-10 character set encoded in octal, decimal, and hexadecimal
+iso-8859-11 (7)      - ISO 8859-11 character set encoded in octal, decimal, and hexadecimal
+iso-8859-13 (7)      - ISO 8859-13 character set encoded in octal, decimal, and hexadecimal
+iso-8859-14 (7)      - ISO 8859-14 character set encoded in octal, decimal, and hexadecimal
+iso-8859-15 (7)      - ISO 8859-15 character set encoded in octal, decimal, and hexadecimal
+iso-8859-16 (7)      - ISO 8859-16 character set encoded in octal, decimal, and hexadecimal
+iso-8859-2 (7)       - ISO 8859-2 character set encoded in octal, decimal, and hexadecimal
+iso-8859-3 (7)       - ISO 8859-3 character set encoded in octal, decimal, and hexadecimal
+iso-8859-4 (7)       - ISO 8859-4 character set encoded in octal, decimal, and hexadecimal
+iso-8859-5 (7)       - ISO 8859-5 character set encoded in octal, decimal, and hexadecimal
+iso-8859-6 (7)       - ISO 8859-6 character set encoded in octal, decimal, and hexadecimal
+iso-8859-7 (7)       - ISO 8859-7 character set encoded in octal, decimal, and hexadecimal
+iso-8859-8 (7)       - ISO 8859-8 character set encoded in octal, decimal, and hexadecimal
+iso-8859-9 (7)       - ISO 8859-9 character set encoded in octal, decimal, and hexadecimal
+iso_8859-1 (7)       - ISO 8859-1 character set encoded in octal, decimal, and hexadecimal
+iso_8859-10 (7)      - ISO 8859-10 character set encoded in octal, decimal, and hexadecimal
+iso_8859-11 (7)      - ISO 8859-11 character set encoded in octal, decimal, and hexadecimal
+iso_8859-13 (7)      - ISO 8859-13 character set encoded in octal, decimal, and hexadecimal
+iso_8859-14 (7)      - ISO 8859-14 character set encoded in octal, decimal, and hexadecimal
+iso_8859-15 (7)      - ISO 8859-15 character set encoded in octal, decimal, and hexadecimal
+iso_8859-16 (7)      - ISO 8859-16 character set encoded in octal, decimal, and hexadecimal
+iso_8859-2 (7)       - ISO 8859-2 character set encoded in octal, decimal, and hexadecimal
+iso_8859-3 (7)       - ISO 8859-3 character set encoded in octal, decimal, and hexadecimal
+iso_8859-4 (7)       - ISO 8859-4 character set encoded in octal, decimal, and hexadecimal
+iso_8859-5 (7)       - ISO 8859-5 character set encoded in octal, decimal, and hexadecimal
+iso_8859-6 (7)       - ISO 8859-6 character set encoded in octal, decimal, and hexadecimal
+iso_8859-7 (7)       - ISO 8859-7 character set encoded in octal, decimal, and hexadecimal
+iso_8859-8 (7)       - ISO 8859-8 character set encoded in octal, decimal, and hexadecimal
+iso_8859-9 (7)       - ISO 8859-9 character set encoded in octal, decimal, and hexadecimal
+iso_8859_1 (7)       - ISO 8859-1 character set encoded in octal, decimal, and hexadecimal
+iso_8859_10 (7)      - ISO 8859-10 character set encoded in octal, decimal, and hexadecimal
+iso_8859_11 (7)      - ISO 8859-11 character set encoded in octal, decimal, and hexadecimal
+iso_8859_13 (7)      - ISO 8859-13 character set encoded in octal, decimal, and hexadecimal
+iso_8859_14 (7)      - ISO 8859-14 character set encoded in octal, decimal, and hexadecimal
+iso_8859_15 (7)      - ISO 8859-15 character set encoded in octal, decimal, and hexadecimal
+iso_8859_16 (7)      - ISO 8859-16 character set encoded in octal, decimal, and hexadecimal
+iso_8859_2 (7)       - ISO 8859-2 character set encoded in octal, decimal, and hexadecimal
+iso_8859_3 (7)       - ISO 8859-3 character set encoded in octal, decimal, and hexadecimal
+iso_8859_4 (7)       - ISO 8859-4 character set encoded in octal, decimal, and hexadecimal
+iso_8859_5 (7)       - ISO 8859-5 character set encoded in octal, decimal, and hexadecimal
+iso_8859_6 (7)       - ISO 8859-6 character set encoded in octal, decimal, and hexadecimal
+iso_8859_7 (7)       - ISO 8859-7 character set encoded in octal, decimal, and hexadecimal
+iso_8859_8 (7)       - ISO 8859-8 character set encoded in octal, decimal, and hexadecimal
+iso_8859_9 (7)       - ISO 8859-9 character set encoded in octal, decimal, and hexadecimal
+koi8-r (7)           - Russian character set encoded in octal, decimal, and hexadecimal
+koi8-u (7)           - Ukrainian character set encoded in octal, decimal, and hexadecimal
+latin1 (7)           - ISO 8859-1 character set encoded in octal, decimal, and hexadecimal
+latin10 (7)          - ISO 8859-16 character set encoded in octal, decimal, and hexadecimal
+latin2 (7)           - ISO 8859-2 character set encoded in octal, decimal, and hexadecimal
+latin3 (7)           - ISO 8859-3 character set encoded in octal, decimal, and hexadecimal
+latin4 (7)           - ISO 8859-4 character set encoded in octal, decimal, and hexadecimal
+latin5 (7)           - ISO 8859-9 character set encoded in octal, decimal, and hexadecimal
+latin6 (7)           - ISO 8859-10 character set encoded in octal, decimal, and hexadecimal
+latin7 (7)           - ISO 8859-13 character set encoded in octal, decimal, and hexadecimal
+latin8 (7)           - ISO 8859-14 character set encoded in octal, decimal, and hexadecimal
+latin9 (7)           - ISO 8859-15 character set encoded in octal, decimal, and hexadecimal
+loadunimap (8)       - load the kernel unicode-to-font mapping table
+man-recode (1)       - convert manual pages to another encoding
+openssl-errstr (1ssl) - lookup error codes
+pbget (1)            - compress and encode arbitrary files to pastebin.com
+pbput (1)            - compress and encode arbitrary files to pastebin.com
+pbputs (1)           - compress and encode arbitrary files to pastebin.com
+psfaddtable (1)      - add a Unicode character table to a console font
+psfgettable (1)      - extract the embedded Unicode character table from a console font
+psfstriptable (1)    - remove the embedded Unicode character table from a console font
+psfxtable (1)        - handle Unicode character tables for console fonts
+repertoiremap (5)    - map symbolic character names to Unicode code points
+setkeycodes (8)      - load kernel scancode-to-keycode mapping table entries
+sg_decode_sense (8)  - decode SCSI sense and related data
+sg_inq (8)           - issue SCSI INQUIRY command and/or decode its response
+sg_luns (8)          - send SCSI REPORT LUNS command or decode given LUN
+sg_opcodes (8)       - report supported SCSI commands or task management functions
+sg_ses_microcode (8) - send microcode to a SCSI enclosure
+sg_vpd (8)           - fetch SCSI VPD page and/or decode its response
+showkey (1)          - examine the codes sent by the keyboard
+svcerr_decode (3)    - library routines for remote procedure calls
+tc-fq_codel (8)      - Fair Queuing (FQ) with Controlled Delay (CoDel)
+Text::Iconv (3pm)    - Perl interface to iconv() codeset conversion function
+tis-620 (7)          - ISO 8859-11 character set encoded in octal, decimal, and hexadecimal
+unicode (7)          - universal character set
+unicode_start (1)    - put keyboard and console in unicode mode
+unicode_stop (1)     - revert keyboard and console from unicode mode
+utf-8 (7)            - an ASCII compatible multibyte Unicode encoding
+utf8 (7)             - an ASCII compatible multibyte Unicode encoding
+vpddecode (8)        - VPD structure decoder
+xsubpp (1)           - compiler to convert Perl XS code into C code
+%> gcc hello.c
+%> make hello.c   o
+make: 'hello' is up to date.
+%> make hello.c
+make: Nothing to be done for 'hello.c'.
+%> he  /hello.c
+Error: File found is not executable.
+Error: Command '/hello.c' not found.
+%> /hello
+Hello 20mg57
+%> ext it
+]0;20mg57@elec377-tues-am-12: ~/elec377-tues-am-12/lab2[01;32m20mg57@elec377-tues-am-12[00m:[01;34m~/elec377-tues-am-12/lab2[00m$ exit
+exit
+
+Script done on 2023-10-16 13:20:14-04:00 [COMMAND_EXIT_CODE="0"]

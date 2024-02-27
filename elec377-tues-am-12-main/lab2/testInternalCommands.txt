@@ -1,0 +1,50 @@
+Script started on 2023-10-16 13:03:35-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="221" LINES="12"]
+]0;20mg57@elec377-tues-am-12: ~/elec377-tues-am-12/lab2[01;32m20mg57@elec377-tues-am-12[00m:[01;34m~/elec377-tues-am-12/lab2[00m$ ./shell
+%> pwd
+/home/20mg57/elec377-tues-am-12/lab2
+%> cd 
+%> pwd
+/home/20mg57
+%> c ls
+elec377-tues-am-12
+%> cd  le s -a
+.
+..
+.bash_history
+.bash_logout
+.bashrc
+.cache
+.gitconfig
+.local
+.profile
+.ssh
+.sudo_as_admin_successful
+.vscode-server
+.wget-hsts
+elec377-tues-am-12
+%> cd el	ec377-tues-am-12              	     		 elec377-tues-am-12
+%> ls
+lab0
+lab1
+lab2
+lab3
+%> pwd
+/home/20mg57/elec377-tues-am-12
+%> cd lab2
+%> pwd
+/home/20mg57/elec377-tues-am-12/lab2
+%> e ls -a
+.
+..
+hello
+hello.c
+Makefile
+shell
+shell.c
+testInternalCommands.txt
+testSplitCommand.txt
+%> exit
+]0;20mg57@elec377-tues-am-12: ~/elec377-tues-am-12/lab2[01;32m20mg57@elec377-tues-am-12[00m:[01;34m~/elec377-tues-am-12/lab2[00m$ exit
+exit
+
+Script done on 2023-10-16 13:06:14-04:00 [COMMAND_EXIT_CODE="0"]

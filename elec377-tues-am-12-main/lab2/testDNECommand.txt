@@ -1,0 +1,22 @@
+Script started on 2023-10-16 13:11:09-04:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="221" LINES="12"]
+]0;20mg57@elec377-tues-am-12: ~/elec377-tues-am-12/lab2[01;32m20mg57@elec377-tues-am-12[00m:[01;34m~/elec377-tues-am-12/lab2[00m$ ./shell
+%> hi
+Error: Command 'hi' not found.
+%> bye
+Error: Command 'bye' not found.
+%> ls
+hello
+hello.c
+Makefile
+shell
+shell.c
+testDNECommand.txt
+testInternalCommands.txt
+testSplitCommand.txt
+%> dir
+Error: Command 'dir' not found.
+%> exit
+]0;20mg57@elec377-tues-am-12: ~/elec377-tues-am-12/lab2[01;32m20mg57@elec377-tues-am-12[00m:[01;34m~/elec377-tues-am-12/lab2[00m$ exit
+exit
+
+Script done on 2023-10-16 13:11:47-04:00 [COMMAND_EXIT_CODE="0"]
